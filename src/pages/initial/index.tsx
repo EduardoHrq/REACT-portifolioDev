@@ -20,11 +20,11 @@ import {
 export function Initial() {
   return (
     <div className="space-y-3">
-      <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex p-2 space-x-3">
+      <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex md:flex-row flex-col p-2 space-y-3 space-x-3">
         <img
           src="https://i.imgur.com/MhkgpUH.png"
           alt=""
-          className="w-[10rem] rounded-full ring dark:ring-zinc-50 ring-zinc-900"
+          className="size-20 md:size-[10rem] mx-auto rounded-full ring dark:ring-zinc-50 ring-zinc-900"
         />
         <Separator orientation="vertical" />
         <div className="space-y-4 flex-1">
@@ -36,7 +36,8 @@ export function Initial() {
           </div>
         </div>
         <Separator orientation="vertical" />
-        <div className="grid grid-cols-2 *:size-20 *:flex *:items-center *:justify-center items-center">
+
+        <div className="grid grid-cols-4 md:grid-cols-2 *:md:size-20 *:size-12 *:flex *:items-center *:justify-center justify-items-center">
           <div>
             <Github />
           </div>
