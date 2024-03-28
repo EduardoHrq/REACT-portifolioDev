@@ -2,12 +2,14 @@ import { Separator } from "@/components/ui/separator";
 import { ProfileContainer } from "./styles";
 import {
   Book,
+  Eye,
   Frown,
   Github,
   Linkedin,
   Mail,
   Phone,
   StickyNote,
+  Users,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -16,10 +18,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { NavLink } from "react-router-dom";
 
 export function Initial() {
   return (
     <div className="space-y-3">
+      {/* profile */}
       <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex md:flex-row flex-col p-2 space-y-3 space-x-3">
         <img
           src="https://i.imgur.com/MhkgpUH.png"
@@ -30,29 +34,137 @@ export function Initial() {
         <div className="space-y-4 flex-1">
           <p className="font-bold text-2xl">Eduardo Henrique Lima Silva</p>
           <p className="opacity-75">Desenvolvedor FullStack</p>
-          <div className="flex space-x-3 *:bg-zinc-300 *:dark:bg-zinc-700 *:px-3 *:py-1 ">
-            <Badge variant={"outline"}>Java</Badge>
-            <Badge variant={"outline"}>JavaScript</Badge>
+          <div className="flex space-x-3 ">
+            <Badge
+              variant={"outline"}
+              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+            >
+              Java
+            </Badge>
+            <Badge
+              variant={"outline"}
+              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+            >
+              JavaScript
+            </Badge>
+            <Badge
+              variant={"outline"}
+              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+            >
+              SpringBoot
+            </Badge>
+            <Badge
+              variant={"outline"}
+              className="hidden md:block bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+            >
+              ReactJS
+            </Badge>
+            <Badge
+              variant={"outline"}
+              className="hidden md:block bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+            >
+              Typescript
+            </Badge>
+            <NavLink to={"skills"}>
+              <span>...</span>
+              <span className="hover:underline">See all</span>
+            </NavLink>
           </div>
         </div>
         <Separator orientation="vertical" />
 
         <div className="grid grid-cols-4 md:grid-cols-2 *:md:size-20 *:size-12 *:flex *:items-center *:justify-center justify-items-center">
-          <div>
-            <Github />
-          </div>
-          <div>
-            <Linkedin />
-          </div>
-          <div>
-            <Mail />
-          </div>
-          <div>
-            <Phone />
-          </div>
+          <a
+            className="relative"
+            href="https://github.com/eduardohrq"
+            target="_blank"
+          >
+            <div className="group">
+              <Github className="fill-zinc-50 text-zinc-50 cursor-pointer" />
+              <div className="hidden absolute right-0 top-[50%] -translate-y-1/2  w-max z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
+                <div className="bg-black p-2 rounded-full">
+                  <Github className="fill-zinc-50 text-zinc-50" />
+                </div>
+                <div className="h-[40px] bg-black p-[.5px] opacity-50"></div>
+                <div className="space-y-1">
+                  <h1 className="font-bold text-[1.3rem]">Github</h1>
+                  <p className="text-[1rem] opacity-50">@EduardoHrq</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            className="relative"
+            href="https://linkedin.com/in/eduardohrq"
+            target="_blank"
+          >
+            <div className="group">
+              <Linkedin className="fill-zinc-50 text-zinc-50 cursor-pointer" />
+              <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
+                <div className="bg-blue-500 p-2 rounded-full">
+                  <Linkedin className="fill-zinc-50 text-zinc-50" />
+                </div>
+                <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
+                <div className="space-y-1">
+                  <h1 className="font-bold text-[1.2rem]">Linkedin</h1>
+                  <p className="text-[.8rem] opacity-50">@EduardoHrq</p>
+                  <p className="*:text-[.8rem] flex items-center gap-2 ">
+                    <Users className="size-[.8rem]" />
+                    <div>127 conexões</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            className="relative"
+            href="mailto:eduardohrq.silva06@gmail.com"
+            target="_blank"
+          >
+            <div className="group">
+              <Mail className="fill-zinc-500 text-zinc-50" />
+
+              <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
+                <div className="bg-zinc-300 p-2 rounded-full">
+                  <Mail className="fill-zinc-50 text-zinc-900" />
+                </div>
+                <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
+                <div className="space-y-1">
+                  <h1 className="font-bold text-[1.2rem]">E-mail</h1>
+                  <p className="text-[.8rem] opacity-50">
+                    eduardohrq.silva06@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            className="relative"
+            href="https://wa.me/61999115197"
+            target="_blank"
+          >
+            <div className="group">
+              <Phone className="fill-zinc-50 text-zinc-50" />
+
+              <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
+                <div className="bg-green-500 p-2 rounded-full">
+                  <Phone className="fill-zinc-50 text-zinc-50" />
+                </div>
+                <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
+                <div className="space-y-1">
+                  <h1 className="font-bold text-[1.2rem]">Celular</h1>
+                  <p className="text-[.8rem] opacity-50">(61) 9 99911-5197</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </ProfileContainer>
 
+      {/* BIO */}
       <div className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl text-justify p-5 ">
         Olá, me chamo Eduardo Henrique, tenho 21 anos de idade, resido em uma
         cidade próxima a Brasília no Goiás, sou um jovem estudioso, criativo e
@@ -82,9 +194,12 @@ export function Initial() {
         </div>
       </div>
 
+      {/* experiencia e formacao */}
       <div className="flex flex-col md:flex-row transition-all gap-3 *:flex-1 *:backdrop-brightness-150 *:bg-zinc-500 *:bg-opacity-15 *:backdrop-blur-md *:rounded-xl *:p-2">
         <div className="flex flex-col">
-          <p className="text-2xl font-bold mb-5">Experiencia</p>
+          <p className="text-2xl font-bold mb-5">
+            <div>Experiencia</div>
+          </p>
           <div className="flex-1 flex flex-col items-center justify-center ">
             <div className="flex flex-col items-center justify-center gap-2 my-5">
               <Frown size={30} />
@@ -93,7 +208,18 @@ export function Initial() {
           </div>
         </div>
         <div>
-          <p className="text-2xl font-bold mb-5">Formações / Certificações</p>
+          <p className="mb-5 flex items-center justify-between">
+            <div className="text-2xl font-bold ">Formações / Certificações</div>
+            <NavLink
+              to={"certificates"}
+              className={"hover:underline flex items-center space-x-2 group"}
+            >
+              <p className="opacity-0 group-hover:opacity-100 transition-all translate-x-[100%] group-hover:translate-x-0">
+                See all
+              </p>
+              <Eye className="" />
+            </NavLink>
+          </p>
           <div className="space-y-2">
             <Accordion type="single" collapsible>
               <AccordionItem value="item1">
@@ -178,8 +304,20 @@ export function Initial() {
         </div>
       </div>
 
+      {/* projetos */}
       <div className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl text-justify p-2">
-        <div className="text-2xl font-bold mb-5">Projetos</div>
+        <div className="mb-5 flex justify-between">
+          <h1 className="text-2xl font-bold ">Projetos</h1>
+          <NavLink
+            to={"portifolio"}
+            className={"hover:underline flex items-center space-x-2 group"}
+          >
+            <p className="md:opacity-0 group-hover:opacity-100 transition-all md:translate-x-[100%] group-hover:translate-x-0">
+              See all
+            </p>
+            <Eye className="" />
+          </NavLink>
+        </div>
       </div>
     </div>
   );

@@ -33,24 +33,49 @@ export function Side() {
 
       <Separator orientation="horizontal" className="my-3" />
 
-      <LinksContainer className="flex flex-col space-y-5">
-        <NavLink to={"/"}>
-          <User />
+      <LinksContainer className="flex flex-col space-y-5 ">
+        <NavLink
+          to={"/"}
+          className={
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+          }
+        >
+          <User className="fill-zinc-100 text-zinc-100" />
           ShowAll
         </NavLink>
-        <NavLink to={"skills"}>
+        <NavLink
+          to={"skills"}
+          className={
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+          }
+        >
           <Circle />
           skills
         </NavLink>
-        <NavLink to={"/"}>
+        <NavLink
+          to={"portifolio"}
+          className={
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+          }
+        >
           <Circle />
           Portifolio
         </NavLink>
-        <NavLink to={"/"}>
+        <NavLink
+          to={"certificates"}
+          className={
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+          }
+        >
           <Circle />
           Certificates
         </NavLink>
-        <NavLink to={"/"}>
+        <NavLink
+          to={"contact"}
+          className={
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+          }
+        >
           <Circle />
           Contact
         </NavLink>
@@ -58,16 +83,29 @@ export function Side() {
 
       <Separator orientation="horizontal" className="my-3" />
 
-      <div className="flex justify-between my-5">
-        <div>
-          <Github />
-        </div>
-        <div>
-          <Linkedin />
-        </div>
-        <div>
-          <Circle />
-        </div>
+      <div className="flex justify-between my-5 *:no-underline *:relative *:cursor-pointer ">
+        <a
+          className="group"
+          href="https://github.com/eduardohrq"
+          target="_blank"
+        >
+          <Github className="fill-zinc-100 text-zinc-100" />
+          <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
+            Github/Eduardohrq
+          </div>
+        </a>
+        <a className="group" href="https://linkedin.com/in/eduardohrq">
+          <Linkedin className="fill-zinc-100 text-zinc-100" />
+          <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
+            Linkedin/Eduardohrq
+          </div>
+        </a>
+        <a className="group" href="#" target="_blank">
+          <Circle className="fill-zinc-100 text-zinc-100" />
+          <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
+            Github/Eduardohrq
+          </div>
+        </a>
       </div>
     </SideContainer>
   );

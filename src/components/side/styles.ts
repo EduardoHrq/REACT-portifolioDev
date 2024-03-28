@@ -34,7 +34,6 @@ export const LinksContainer = styled.div`
     padding-left: 0.7rem;
     padding-right: 2rem;
     line-height: 0;
-    font-weight: bold;
     border-radius: 8px;
 
     transition: all 0.3s;
