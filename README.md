@@ -23,6 +23,9 @@ PortifolioDev
 
 ## Disponivel / Deploy
 
+<a href="https://eduardohrq-portifoliodev.vercel.app" target="_blank">
+  <img src="https://img.shields.io/badge/VERCEL-eduardohrq--portifoliodev_↗️-gray?style=for-the-badge&logo=vercel" />
+</a>
 
 ## Tecnologias
 
