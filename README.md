@@ -5,7 +5,7 @@ PortifolioDev
 <p align="center">
   <img alt="Static Badge" src="https://img.shields.io/github/repo-size/eduardohrq/portifoliodev?style=for-the-badge">
   <img alt="Static Badge" src="https://img.shields.io/github/languages/count/eduardohrq/portifoliodev?style=for-the-badge">
-  <img alt="Static Badge" src="https://img.shields.io/badge/status-In_Progress-black?style=for-the-badge">
+  <img alt="Static Badge" src="https://img.shields.io/badge/status-In_Progress-blue?style=for-the-badge">
 </p>
 
 <div align="center" >
