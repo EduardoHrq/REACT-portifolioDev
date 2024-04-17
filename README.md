@@ -24,9 +24,10 @@ PortifolioDev
 ## Disponivel / Deploy
 
 
-## Tecnologias e dependencias
+## Tecnologias
 
-
+<img src="https://skillicons.dev/icons?i=react" width="50" /> <br> <sub>React</sub> | <img src="https://skillicons.dev/icons?i=nodejs" width="50" /> <br> <sub>NodeJs</sub> | <img src="https://skillicons.dev/icons?i=ts" width="50" /> <br> <sub>Typescript</sub> | <img src="https://skillicons.dev/icons?i=tailwind" width="50" /> <br> <sub>Tailwind</sub> | <img src="https://avatars.githubusercontent.com/u/139895814?s=280&v=4" width="50" /> <br> <sub>Shadcn</sub> | <img src="https://images.opencollective.com/lucide-icons/9fe79a6/logo/256.png" width="50" /> <br> <sub>Lucide icons</sub>
+| :---: | :---: | :---: | :---: | :---: | :---:
 
 ## Desenvolvedores
 | [<img src="https://avatars.githubusercontent.com/u/57080830?v=4" style="border-radius: 100%" width="150" /> <br> <sub>EduardoHrq</sub>](https://github.com/Eduardohrq) | 
