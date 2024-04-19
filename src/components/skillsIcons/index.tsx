@@ -11,7 +11,7 @@ export function SkillsIcons(props: IconsProps) {
 
   return (
     <div className="group relative flex items-center justify-center ">
-      <div className="group-hover:translate-y-[-20%] transition-all rounded-[18px] ring ring-zinc-200 overflow-hidden">
+      <div className="group-hover:translate-y-[-20%] transition-all rounded-[18px] ring ring-zinc-200">
         {props.star ? (
           <Star className="fill-black text-black bg-zinc-100 rounded-full p-1 size-7 absolute top-[-10px] right-[-10px] " />
         ) : null}
@@ -20,6 +20,7 @@ export function SkillsIcons(props: IconsProps) {
           alt={props.name}
           width={75}
           height={75}
+          className="rounded-[18px]"
         />
       </div>
       <span className="text-center capitalize absolute opacity-0 top-1/2 translate-y-[-50%] group-hover:opacity-100 group-hover:top-[110%] transition-all group-hover:delay-500">
