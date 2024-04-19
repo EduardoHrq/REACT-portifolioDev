@@ -24,7 +24,7 @@ export function Side() {
 
       <div className="flex flex-col items-center justify-center my-5">
         <img
-          src="https://i.imgur.com/MhkgpUH.png"
+          src="https://i.imgur.com/qmVWOlh.jpg"
           className="object-cover aspect-auto w-[6rem] rounded-full"
           alt="profile"
         />

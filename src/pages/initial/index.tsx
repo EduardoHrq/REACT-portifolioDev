@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ProfileContainer } from "./styles";
 import {
+  ArrowUpRight,
   Book,
   Eye,
   Frown,
@@ -22,11 +23,11 @@ import { NavLink } from "react-router-dom";
 
 export function Initial() {
   return (
-    <div className="space-y-3">
+    <div className="space-y-7">
       {/* profile */}
       <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex md:flex-row flex-col p-2 space-y-3 space-x-3">
         <img
-          src="https://i.imgur.com/MhkgpUH.png"
+          src="https://i.imgur.com/qmVWOlh.jpg"
           alt=""
           className="size-20 md:size-[10rem] mx-auto rounded-full ring dark:ring-zinc-50 ring-zinc-900"
         />
@@ -34,7 +35,18 @@ export function Initial() {
         <div className="space-y-4 flex-1">
           <p className="font-bold text-2xl">Eduardo Henrique Lima Silva</p>
           <p className="opacity-75">Desenvolvedor FullStack</p>
-          <div className="flex space-x-3 ">
+          <div className="flex opacity-75 gap-2">
+            ORCID:
+            <a
+              href="https://orcid.org/0009-0007-7639-6098"
+              target="_blank"
+              className="group hover:underline hover:bg-zinc-700 hover:gap-4 transition-all flex gap-2"
+            >
+              0009-0007-7639-6098
+              <ArrowUpRight className="group-hover:animate-pulse" />
+            </a>
+          </div>
+          <div className="flex space-x-3 *:cursor-default">
             <Badge
               variant={"outline"}
               className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
@@ -65,9 +77,11 @@ export function Initial() {
             >
               Typescript
             </Badge>
-            <NavLink to={"skills"}>
+            <NavLink to={"skills"} className={"cursor-pointer"}>
               <span>...</span>
-              <span className="hover:underline">See all</span>
+              <span className="hover:underline cursor-pointer hover:bg-zinc-700 p-2 hover:bg-opacity-50 rounded-full">
+                See all
+              </span>
             </NavLink>
           </div>
         </div>
@@ -79,8 +93,8 @@ export function Initial() {
             href="https://github.com/eduardohrq"
             target="_blank"
           >
-            <div className="group">
-              <Github className="fill-zinc-50 text-zinc-50 cursor-pointer" />
+            <div className="group p-3 bg-black rounded-full">
+              <Github className="fill-zinc-50 bg-black text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
               <div className="hidden absolute right-0 top-[50%] -translate-y-1/2  w-max z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-black p-2 rounded-full">
                   <Github className="fill-zinc-50 text-zinc-50" />
@@ -99,8 +113,8 @@ export function Initial() {
             href="https://linkedin.com/in/eduardohrq"
             target="_blank"
           >
-            <div className="group">
-              <Linkedin className="fill-zinc-50 text-zinc-50 cursor-pointer" />
+            <div className="group p-3 bg-blue-500 rounded-full">
+              <Linkedin className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-blue-500 p-2 rounded-full">
                   <Linkedin className="fill-zinc-50 text-zinc-50" />
@@ -123,8 +137,8 @@ export function Initial() {
             href="mailto:eduardohrq.silva06@gmail.com"
             target="_blank"
           >
-            <div className="group">
-              <Mail className="fill-zinc-500 text-zinc-50" />
+            <div className="group p-3 bg-zinc-400 rounded-full">
+              <Mail className="fill-zinc-500 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
 
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-zinc-300 p-2 rounded-full">
@@ -146,8 +160,8 @@ export function Initial() {
             href="https://wa.me/61999115197"
             target="_blank"
           >
-            <div className="group">
-              <Phone className="fill-zinc-50 text-zinc-50" />
+            <div className="group p-3 bg-green-500 rounded-full">
+              <Phone className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
 
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-green-500 p-2 rounded-full">
@@ -165,25 +179,17 @@ export function Initial() {
       </ProfileContainer>
 
       {/* BIO */}
-      <div className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl text-justify p-5 ">
+      <div className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl text-justify p-5 leading-normal">
         Olá, me chamo Eduardo Henrique, tenho 21 anos de idade, resido em uma
         cidade próxima a Brasília no Goiás, sou um jovem estudioso, criativo e
         que gosta ou sente-se desafiado a resolver problemas. Estou sempre
         estudando esta área (TI) e buscando aprimorar minhas habilidades.
-        Atualmente, dezembro de 2023, estou cursando engenharia de software no
+        Atualmente, abril de 2024, estou cursando engenharia de software no
         Centro Universitário do Planalto Central Apparecido dos Santos
-        (UNICEPLAC), Gama-DF, finalizando o 6 semestre de 8 ao todo.
+        (UNICEPLAC), Gama-DF, no 7º semestre de 8º ao todo.
+        <br />
+        <br />
         <div className="hidden md:block">
-          Nesta graduação pude adquirir conhecimentos acerca do ciclo de vida
-          completo de um software e questões gerenciais e econômicas. Sendo mais
-          específico, pude ver algoritmos, arquiteturas de rede e computadores,
-          arquiteturas de software, sistemas operacionais, Scrum, Levantamento
-          de requisitos, UML, POO (programação orientada a objetos), Programação
-          (java, estrutura de dados, design patterns), Programação Web (Tomcat,
-          Rest, HTML - CSS, Bootstrap...), Banco de dados, engenharia econômica
-          e inovação, ainda não finalizei o curso, mas posso listar estes
-          conhecimentos.
-          <br />
           Meus estudos não focam ou estão concentrados somente no curso
           superior, em casa busco constantemente participar de eventos, cursos,
           palestras e comunidades, a fim de acompanhar inovações das
@@ -202,7 +208,7 @@ export function Initial() {
           </p>
           <div className="flex-1 flex flex-col items-center justify-center ">
             <div className="flex flex-col items-center justify-center gap-2 my-5">
-              <Frown size={30} />
+              <Frown size={30} className="text-red-500" />
               Sem experiencia profissional
             </div>
           </div>
