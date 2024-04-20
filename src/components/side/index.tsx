@@ -37,7 +37,7 @@ export function Side() {
         <NavLink
           to={"/"}
           className={
-            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
           <User className="fill-zinc-100 text-zinc-100" />
@@ -46,7 +46,7 @@ export function Side() {
         <NavLink
           to={"skills"}
           className={
-            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
           <Circle />
@@ -55,7 +55,7 @@ export function Side() {
         <NavLink
           to={"portifolio"}
           className={
-            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
           <Circle />
@@ -64,7 +64,7 @@ export function Side() {
         <NavLink
           to={"certificates"}
           className={
-            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
           <Circle />
@@ -73,7 +73,7 @@ export function Side() {
         <NavLink
           to={"contact"}
           className={
-            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-zinc-700"
+            "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
           <Circle />
@@ -85,17 +85,20 @@ export function Side() {
 
       <div className="flex justify-between my-5 *:no-underline *:relative *:cursor-pointer ">
         <a
-          className="group"
+          className="group hover:bg-zinc-200 size-[32px] flex items-center justify-center rounded-full transition-all"
           href="https://github.com/eduardohrq"
           target="_blank"
         >
-          <Github className="fill-zinc-100 text-zinc-100" />
+          <Github className="fill-zinc-100 text-zinc-100 group-hover:fill-black group-hover:text-black transition-all" />
           <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
             Github/Eduardohrq
           </div>
         </a>
-        <a className="group" href="https://linkedin.com/in/eduardohrq">
-          <Linkedin className="fill-zinc-100 text-zinc-100" />
+        <a
+          className="group hover:bg-blue-500 size-[32px] flex items-center justify-center rounded-full transition-all"
+          href="https://linkedin.com/in/eduardohrq"
+        >
+          <Linkedin className="fill-zinc-100 text-zinc-100 group-hover:fill-zinc-100 group-hover:text-zinc-100 transition-all" />
           <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
             Linkedin/Eduardohrq
           </div>

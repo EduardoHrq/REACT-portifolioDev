@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "PortifolioDev",
+      "shortDesc": "testetestes",
+      "description": "loremipsumloremipsumloremipsum",
+      "masterTecs": ["react", "typescript", "nodejs", "tailwind"],
+      "image": "https://private-user-images.githubusercontent.com/57080830/323345715-193e9ff1-2bd0-4fbb-aed7-c4b8c6e8183a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM2Mjk5MDIsIm5iZiI6MTcxMzYyOTYwMiwicGF0aCI6Ii81NzA4MDgzMC8zMjMzNDU3MTUtMTkzZTlmZjEtMmJkMC00ZmJiLWFlZDctYzRiOGM2ZTgxODNhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDE2MTMyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4NGQ4ZGNiNzkxNzA5YzdkYjZhZGZmMjNmMzUyM2ExMDNmN2VhNDZlM2U0MzJiNGRiZDljOTk2OWE0YjA0MmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.NVmc4QgCUYj3SYwJidWdh7lRXg7oGX3qTQ5UrGe4-gs",
+      "status": "In Progress",
+      "gitRepo": "https://github.com/EduardoHrq/portifolioDev",
+      "demo": "https://eduardohrq-portifoliodev.vercel.app/"
+    },
+
+    {
+      "id": 2,
+      "title": "MonthExpenses",
+      "shortDesc": "testetestesfasgadg",
+      "description": "loremipsumloremipsumloremipsumgasdgasdgasd",
+      "masterTecs": ["java", "spring"],
+      "image": "https://tm.ibxk.com.br/2017/07/13/13160112901226.jpg",
+      "status": "Done",
+      "gitRepo": "https://github.com/EduardoHrq/portifolioDev",
+      "demo": "https://eduardohrq-portifoliodev.vercel.app/"
+    },
+
+    {
+      "id": 3,
+      "title": "Teste",
+      "shortDesc": "testetestesfasgadg",
+      "description": "loremipsumloremipsumloremipsumgasdgasdgasd",
+      "masterTecs": ["js", "react"],
+      "image": "https://tm.ibxk.com.br/2017/07/13/13160112901226.jpg",
+      "status": "Maintence",
+      "gitRepo": "https://github.com/EduardoHrq/portifolioDev",
+      "demo": "https://eduardohrq-portifoliodev.vercel.app/"
+    }
+  ],
+  "filter": ["java", "react", "spring", "javascript", "nodejs", "typescript"]
+}
