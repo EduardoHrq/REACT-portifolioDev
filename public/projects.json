@@ -15,25 +15,13 @@
     {
       "id": 2,
       "title": "MonthExpenses",
-      "shortDesc": "testetestesfasgadg",
+      "shortDesc": "Gastos mensail",
       "description": "loremipsumloremipsumloremipsumgasdgasdgasd",
       "masterTecs": ["java", "spring"],
-      "image": "https://tm.ibxk.com.br/2017/07/13/13160112901226.jpg",
-      "status": "Done",
-      "gitRepo": "https://github.com/EduardoHrq/portifolioDev",
-      "demo": "https://eduardohrq-portifoliodev.vercel.app/"
-    },
-
-    {
-      "id": 3,
-      "title": "Teste",
-      "shortDesc": "testetestesfasgadg",
-      "description": "loremipsumloremipsumloremipsumgasdgasdgasd",
-      "masterTecs": ["js", "react"],
-      "image": "https://tm.ibxk.com.br/2017/07/13/13160112901226.jpg",
-      "status": "Maintence",
-      "gitRepo": "https://github.com/EduardoHrq/portifolioDev",
-      "demo": "https://eduardohrq-portifoliodev.vercel.app/"
+      "image": "https://kinsta.com/pt/wp-content/uploads/sites/3/2021/12/back-end-developer.png",
+      "status": "In Progress",
+      "gitRepo": "#",
+      "demo": "#"
     }
   ],
   "filter": ["java", "react", "spring", "javascript", "nodejs", "typescript"]
