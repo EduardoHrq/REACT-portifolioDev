@@ -70,7 +70,7 @@ export function ProjectContainer(props: projectProps) {
     );
   }
   return (
-    <div className="flex flex-col md:flex-row gap-2 p-3 bg-slate-800 bg-opacity-75 rounded-xl md:bg-transparent">
+    <div className="flex flex-col md:flex-row gap-2 p-3 bg-zinc-800 bg-opacity-75 rounded-xl md:bg-transparent">
       <div className="relative hover:scale-110 transition-all">
         <Dialog>
           <DialogTrigger asChild>
