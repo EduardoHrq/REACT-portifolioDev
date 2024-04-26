@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+import { ProjectModal } from "../projectModal";
 
 interface projectProps {
   title: string;
@@ -121,13 +122,26 @@ export function ProjectContainer(props: projectProps) {
           </div>
         </div>
         <div className="flex md:flex-col justify-between md:*:w-[50px] *:flex-1 *:flex *:items-center *:justify-center p-2">
-          <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
-            <Info />
-          </button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
+                <Info />
+              </button>
+            </DialogTrigger>
+            <ProjectModal 
+              image={props.image}
+              title={props.title}
+              demo={props.demo}
+              description={props.description}
+              gitRepo={props.gitRepo}
+              masterTecs={["alkfdjalfk"]}
+              status={props.status}
+              />   
+          </Dialog>
           <a
             href={props.demo}
             target="_blank"
-            className="bg-zinc-500 hover:brightness-90 transition-all hover:scale-110"
+            className="bg-zinc-500 hover:brightness-90 py-2 transition-all hover:scale-110"
           >
             <Eye />
           </a>
