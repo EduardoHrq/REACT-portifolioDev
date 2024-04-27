@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 import { ProjectModal } from "../projectModal";
+import { useMediaQuery } from "@uidotdev/usehooks";
+import { Drawer, DrawerTrigger } from "../ui/drawer";
 
 interface projectProps {
   title: string;
@@ -24,52 +26,8 @@ interface projectProps {
 }
 
 export function ProjectContainer(props: projectProps) {
-  if (props.reversed) {
-    return (
-      <div className="flex gap-2 p-3 flex-row-reverse">
-        <div className="relative hover:scale-110 transition-all">
-          <div className="relative group">
-            <img
-              src={props.image}
-              alt=""
-              width={300}
-              height={200}
-              className="rounded-[12px] group-hover:brightness-50 group-hover:delay-500"
-            />
-            <button className="absolute flex items-center justify-center inset-0 opacity-0 group-hover:delay-500 group-hover:scale-100 scale-0 group-hover:opacity-100 transition-all">
-              <Eye size={70} />
-            </button>
-          </div>
-          <div className="absolute top-0 right-0 flex items-center gap-4 bg-orange-400 bg-opacity-40 px-3 py-1 rounded-full">
-            <span>{props.status}</span>
-            <div className={"size-4 bg-orange-500 rounded-full"}></div>
-          </div>
-        </div>
-        <div className="flex flex-1 flex-row-reverse">
-          <div className="flex flex-col flex-1 justify-between py-4 text-center">
-            <h1 className="text-2xl font-bold hover:scale-125">
-              {props.title}
-            </h1>
-            <p>{props.shortDesc}</p>
-            <div>
-              <SkillsIcons name="java" icon />
-            </div>
-          </div>
-          <div className="flex flex-col justify-between *:w-[50px] *:flex-1 *:flex *:items-center *:justify-center p-2">
-            <button className="bg-blue-500 rounded-t-lg hover:brightness-90 transition-all hover:scale-110">
-              <Info />
-            </button>
-            <button className="bg-zinc-500 hover:brightness-90 transition-all hover:scale-110">
-              <Eye />
-            </button>
-            <button className="bg-zinc-200 text-black rounded-b-lg hover:brightness-90 transition-all hover:scale-110">
-              <Github />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
     <div className="flex flex-col md:flex-row gap-2 p-3 bg-zinc-800 bg-opacity-75 rounded-xl md:bg-transparent">
       <div className="relative hover:scale-110 transition-all">
@@ -86,7 +44,7 @@ export function ProjectContainer(props: projectProps) {
               </button>
             </button>
           </DialogTrigger>
-          <DialogContent className="*:text-zinc-100 w-[75lvw] ring ring-zinc-200 rounded-[18px]">
+          <DialogContent className="*:text-zinc-100 w-[97lvw] p-1 ring ring-zinc-200 rounded-[18px]">
             <DialogHeader className="">
               <DialogClose asChild>
                 <button className="size-4 bg-red-500 rounded-full absolute top-3 left-3"></button>
@@ -98,6 +56,7 @@ export function ProjectContainer(props: projectProps) {
             <img src={props.image} alt="" className="w-full" />
           </DialogContent>
         </Dialog>
+
         <BoxStatus
           className={
             "absolute top-0 right-0 flex items-center gap-4 px-3 py-1 rounded-full " +
@@ -122,22 +81,43 @@ export function ProjectContainer(props: projectProps) {
           </div>
         </div>
         <div className="flex md:flex-col justify-between md:*:w-[50px] *:flex-1 *:flex *:items-center *:justify-center p-2">
-          <Dialog>
-            <DialogTrigger asChild>
-              <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
-                <Info />
-              </button>
-            </DialogTrigger>
-            <ProjectModal 
-              image={props.image}
-              title={props.title}
-              demo={props.demo}
-              description={props.description}
-              gitRepo={props.gitRepo}
-              masterTecs={["alkfdjalfk"]}
-              status={props.status}
-              />   
-          </Dialog>
+          {isDesktop ? (
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
+                  <Info />
+                </button>
+              </DialogTrigger>
+              <ProjectModal
+                inDesktop={isDesktop}
+                image={props.image}
+                title={props.title}
+                demo={props.demo}
+                description={props.description}
+                gitRepo={props.gitRepo}
+                masterTecs={props.masterTecs}
+                status={props.status}
+              />
+            </Dialog>
+          ) : (
+            <Drawer>
+              <DrawerTrigger asChild>
+                <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
+                  <Info />
+                </button>
+              </DrawerTrigger>
+              <ProjectModal
+                inDesktop={isDesktop}
+                image={props.image}
+                title={props.title}
+                demo={props.demo}
+                description={props.description}
+                gitRepo={props.gitRepo}
+                masterTecs={props.masterTecs}
+                status={props.status}
+              />
+            </Drawer>
+          )}
           <a
             href={props.demo}
             target="_blank"

@@ -5,7 +5,7 @@ interface IconsProps {
   link?: string;
   star?: boolean;
   icon?: boolean;
-  size?: number
+  size?: number;
 }
 
 export function SkillsIcons(props: IconsProps) {
@@ -32,8 +32,8 @@ export function SkillsIcons(props: IconsProps) {
           <img
             src={props.link ? props.link : url}
             alt={props.name}
-            width={75}
-            height={75}
+            width={props.size ? props.size : 75}
+            height={props.size ? props.size : 75}
             className="rounded-[18px]"
           />
         </div>

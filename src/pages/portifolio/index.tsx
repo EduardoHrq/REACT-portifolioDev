@@ -51,7 +51,7 @@ export function Portifolio() {
               value={"all"}
               onChange={(event) => {
                 event.preventDefault;
-                setFilter("all")
+                setFilter("all");
               }}
               hidden
               checked={filter === "all"}
