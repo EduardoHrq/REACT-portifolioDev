@@ -42,7 +42,7 @@ export function Portifolio() {
           <label
             key={"all"}
             className="flex items-center px-4 py-2 gap-2 bg-zinc-500 bg-opacity-50 rounded-full 
-            hover:px-10 transition-all has-[:checked]:bg-sky-700 has-[:checked]:hover:px-4
+            md:hover:px-10 transition-all has-[:checked]:bg-sky-700 has-[:checked]:hover:px-4
             has-[:checked]:ring-2 has-[:checked]:ring-zinc-200"
           >
             <input

@@ -4,7 +4,7 @@ import { Initial } from "./pages/initial";
 import { Skills } from "./pages/skills";
 import { Portifolio } from "./pages/portifolio";
 import { Certificates } from "./pages/certificates";
-import { Contact } from "lucide-react";
+import { Contacts } from "./pages/contact";
 
 export function Router() {
   return (
@@ -14,7 +14,7 @@ export function Router() {
         <Route path="skills" element={<Skills />}/>
         <Route path="portifolio" element={<Portifolio />}/>
         <Route path="certificates" element={<Certificates />}/>
-        <Route path="contact" element={<Contact />}/>
+        <Route path="contact" element={<Contacts />}/>
       </Route>
     </Routes>
   );

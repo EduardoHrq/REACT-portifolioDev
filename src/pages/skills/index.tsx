@@ -6,7 +6,9 @@ export function Skills() {
       <div className="space-y-20 pb-10 ">
         {/* languages */}
         <div>
-          <div className="mb-7 text-2xl font-bold">Languages</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            Languages
+          </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="java" star />
             <SkillsIcons name="javascript" />
@@ -17,7 +19,9 @@ export function Skills() {
 
         {/* backend */}
         <div>
-          <div className="mb-7 text-2xl font-bold">Back-end</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            Back-end
+          </div>
           <div className="flex flex-wrap gap-10 px-2 *:cursor-default">
             <SkillsIcons name="spring" star />
             <SkillsIcons name="nodejs" />
@@ -50,7 +54,9 @@ export function Skills() {
 
         {/* frontend */}
         <div>
-          <div className="mb-7 text-2xl font-bold">Front-end</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            Front-end
+          </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="react" />
             <SkillsIcons name="vite" />
@@ -76,7 +82,9 @@ export function Skills() {
 
         {/* OS */}
         <div>
-          <div className="mb-7 text-2xl font-bold">OS - Operational System</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            OS - Operational System
+          </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="apple" star />
             <SkillsIcons name="linux" />
@@ -86,7 +94,9 @@ export function Skills() {
 
         {/* IDE */}
         <div>
-          <div className="mb-7 text-2xl font-bold">IDE's</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            IDE's
+          </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="vscode" />
             <SkillsIcons name="idea" />
@@ -95,7 +105,9 @@ export function Skills() {
 
         {/* Version Controll */}
         <div>
-          <div className="mb-7 text-2xl font-bold">Version Controll</div>
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
+            Version Controll
+          </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="git" />
             <SkillsIcons name="github" />
@@ -106,7 +118,7 @@ export function Skills() {
 
         {/* Process and project management */}
         <div>
-          <div className="mb-7 text-2xl font-bold">
+          <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Process and project management
           </div>
           <div className="flex flex-wrap gap-10 *:cursor-default px-2">
