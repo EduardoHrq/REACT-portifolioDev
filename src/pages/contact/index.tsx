@@ -12,15 +12,22 @@ export function Contacts() {
     <>
       <div className="space-y-5">
         <h1 className="mt-5 text-[2rem] font-bold">Social</h1>
-        <div className="grid grid-cols-2 gap-7 space-y-10">
+        <div className="grid md:grid-cols-2  gap-7 space-y-10">
           <a className="*:text-zinc-200 mt-10">
             <div
-              className="flex flex-col items-center gap-6 bg-blue-700 px-5 py-7
-            rounded-xl relative"
+              className="min-h-[300px] flex flex-col items-center gap-6 bg-blue-700 px-5 py-7
+            rounded-xl relative group"
             >
               <div
+                className="hidden md:block absolute inset-1 bg-blue-700 z-20 bg-opacity-50 backdrop-blur-sm 
+              backdrop-saturate-50 opacity-0 group-hover:opacity-100 group-hover:delay-1000 
+              transition-all scale-[.2] group-hover:scale-100 duration-500 rounded-xl 
+              overflow-hidden origin-top"
+              ></div>
+              <div
                 className="bg-blue-950 p-3 rounded-xl absolute -top-[2rem] ring-4 ring-blue-700 
-              z-40"
+              z-20 md:group-hover:top-1/2 md:group-hover:-translate-y-1/2 transition-all md:group-hover:delay-1000
+              duration-300"
               >
                 <Linkedin size={40} className="fill-zinc-100 text-zinc-100" />
               </div>
@@ -55,12 +62,19 @@ export function Contacts() {
 
           <a className="*:text-zinc-200">
             <div
-              className="h-full flex flex-col items-center bg-green-700 px-5 py-7
-            rounded-xl relative"
+              className="md:h-full min-h-[300px] flex flex-col items-center bg-green-700 px-5 py-7
+            rounded-xl relative group"
             >
               <div
+                className="hidden md:block absolute inset-1 bg-green-700 z-20 bg-opacity-50 backdrop-blur-sm 
+              backdrop-saturate-50 opacity-0 group-hover:opacity-100 group-hover:delay-500 
+              transition-all scale-[.2] group-hover:scale-100 duration-500 rounded-xl 
+              overflow-hidden origin-top"
+              ></div>
+              <div
                 className="bg-green-950 p-3 rounded-xl absolute -top-[2rem] ring-4 ring-green-700 
-              z-40"
+              z-20 md:group-hover:top-1/2 md:group-hover:-translate-y-1/2 md:group-hover:delay-500 transition-all
+              duration-300"
               >
                 <WhatsappLogo
                   size={40}

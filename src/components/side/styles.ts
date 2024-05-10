@@ -13,7 +13,7 @@ export const SideContainer = styled.div`
   }
 
   position: fixed;
-  z-index: 3;
+  z-index: 100;
   transform: translate(0, -50%);
   top: 50%;
   transition: all 0.3s;
