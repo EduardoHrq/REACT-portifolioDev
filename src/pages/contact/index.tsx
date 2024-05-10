@@ -1,4 +1,4 @@
-import { Laugh, Linkedin, Mail, Users } from "lucide-react";
+import { Laugh, Linkedin, Users } from "lucide-react";
 import {
   WhatsappLogo,
   Phone,
