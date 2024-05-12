@@ -50,7 +50,7 @@ export function Side() {
           }
         >
           <Brain size={25} weight="fill" />
-          skills
+          Skills
         </NavLink>
         <NavLink
           to={"portifolio"}

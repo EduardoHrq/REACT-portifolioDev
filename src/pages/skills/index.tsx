@@ -9,7 +9,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Languages
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="java" star />
             <SkillsIcons name="javascript" />
             <SkillsIcons name="typescript" />
@@ -22,7 +22,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Back-end
           </div>
-          <div className="flex flex-wrap gap-10 px-2 *:cursor-default">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 px-2 *:cursor-default">
             <SkillsIcons name="spring" star />
             <SkillsIcons name="nodejs" />
             <SkillsIcons name="maven" />
@@ -57,7 +57,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Front-end
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className=" grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="react" />
             <SkillsIcons name="vite" />
             <SkillsIcons name="styledcomponents" />
@@ -85,7 +85,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             OS - Operational System
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="apple" star />
             <SkillsIcons name="linux" />
             <SkillsIcons name="windows" />
@@ -97,7 +97,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             IDE's
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="vscode" />
             <SkillsIcons name="idea" />
           </div>
@@ -108,7 +108,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Version Controll
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons name="git" />
             <SkillsIcons name="github" />
             <SkillsIcons name="gitlab" />
@@ -121,7 +121,7 @@ export function Skills() {
           <div className="mb-7 text-2xl font-bold sticky top-0 bg-zinc-950 z-40">
             Process and project management
           </div>
-          <div className="flex flex-wrap gap-10 *:cursor-default px-2">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap gap-10 *:cursor-default px-2">
             <SkillsIcons
               name="Scrum"
               link="https://images.credly.com/images/db768524-81d9-435e-96fc-33b517e15616/blob.png"

@@ -1,4 +1,4 @@
-import { Laugh, Linkedin, Mail, Users } from "lucide-react";
+import { Laugh, Linkedin, Users } from "lucide-react";
 import {
   WhatsappLogo,
   Phone,
@@ -7,12 +7,13 @@ import {
   PaperPlaneRight,
   GithubLogo,
   ArrowUpRight,
+  Envelope,
 } from "@phosphor-icons/react";
 
 export function Contacts() {
   return (
     <>
-      <div className="space-y-5">
+      <div className="space-y-5 pb-10">
         <h1 className="mt-5 text-[2rem] font-bold">Social</h1>
         <div className="grid md:grid-cols-2  gap-7 space-y-10">
           <a className="*:text-zinc-200 cursor-pointer mt-10" target="_blank" href="https://linkedin.com/in/eduardohrq">
@@ -59,7 +60,7 @@ export function Contacts() {
                 </span>
                 <span className="w-full flex gap-3 opacity-75">
                   <Users />
-                  150 conexões
+                  250 conexões
                 </span>
               </div>
               <div className="flex flex-col items-center">
@@ -217,12 +218,12 @@ export function Contacts() {
               z-20 md:group-hover:top-1/2 md:group-hover:-translate-y-1/2 md:group-hover:delay-100 transition-all
               duration-300"
               >
-                <Mail size={40} className="text-zinc-100" />
+                <Envelope weight="fill" size={40} className="text-zinc-100" />
                 <div
                   className="text-[1.5rem] flex items-center gap-2 absolute w-max -translate-x-1/2
                 opacity-0 left-1/2 -bottom-10 group-hover:opacity-100 transition-all group-hover:delay-200"
                 >
-                  <div>Copiar E-mail</div>
+                  <div>Enviar E-mail</div>
                   <ArrowUpRight weight="bold" />
                 </div>
               </div>

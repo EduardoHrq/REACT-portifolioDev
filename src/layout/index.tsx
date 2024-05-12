@@ -12,3 +12,4 @@ export function DefaultLayout() {
     </Layout>
   );
 }
+  

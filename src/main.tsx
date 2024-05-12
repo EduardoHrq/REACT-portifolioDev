@@ -1,15 +1,39 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { Router } from "./Router";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import "./globals.css";
+import { Initial } from "./pages/initial";
+import { Skills } from "./pages/skills";
+import { DefaultLayout } from "./layout";
+
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: "",
+        element: <Initial />,
+      },
+      {
+        path: "skills",
+        element: <Skills />,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <>
-      <BrowserRouter>
+      <RouterProvider router={routes} />
+
+      {/* <BrowserRouter>
         <Router />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   </React.StrictMode>
 );

@@ -23,13 +23,13 @@ import { NavLink } from "react-router-dom";
 
 export function Initial() {
   return (
-    <div className="space-y-7">
+    <div className="space-y-7 pb-10">
       {/* profile */}
-      <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex md:flex-row flex-col p-2 space-y-3 space-x-3">
+      <ProfileContainer className="backdrop-brightness-150 bg-zinc-500 bg-opacity-15 backdrop-blur-md rounded-xl flex md:flex-row flex-col p-2 gap-4 ">
         <img
           src="https://i.imgur.com/qmVWOlh.jpg"
           alt=""
-          className="size-20 md:size-[10rem] mx-auto rounded-full ring dark:ring-zinc-50 ring-zinc-900"
+          className="size-[10rem] md:size-[10rem] mx-auto rounded-full ring dark:ring-zinc-50 ring-zinc-900"
         />
         <Separator orientation="vertical" />
         <div className="space-y-4 flex-1">
@@ -49,25 +49,25 @@ export function Initial() {
           <div className="flex space-x-3 *:cursor-default">
             <Badge
               variant={"outline"}
-              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+              className="bg-zinc-300 dark:bg-zinc-700 px-2 py-1"
             >
               Java
             </Badge>
             <Badge
               variant={"outline"}
-              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+              className="bg-zinc-300 dark:bg-zinc-700 px-2 py-1"
             >
               JavaScript
             </Badge>
             <Badge
               variant={"outline"}
-              className="bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+              className="bg-zinc-300 dark:bg-zinc-700 px-2 py-1"
             >
               SpringBoot
             </Badge>
             <Badge
               variant={"outline"}
-              className="hidden md:block bg-zinc-300 dark:bg-zinc-700 px-3 py-1"
+              className="hidden md:block bg-zinc-300 dark:bg-zinc-700 px-2 py-1"
             >
               ReactJS
             </Badge>
@@ -87,7 +87,9 @@ export function Initial() {
         </div>
         <Separator orientation="vertical" />
 
-        <div className="grid grid-cols-4 md:grid-cols-2 *:md:size-20 *:size-12 *:flex *:items-center *:justify-center justify-items-center">
+        <div className="grid grid-cols-4 gap-2 md:grid-cols-2 *:md:size-20 *:h-12 *:flex
+         *:items-center *:justify-center mb-3 md:mb-0">
+  
           <a
             className="relative"
             href="https://github.com/eduardohrq"
@@ -316,7 +318,7 @@ export function Initial() {
                     <div className="font-bold text-[1.2rem]">
                       Bootcamp em backend Java
                     </div>
-                    <div>Local: ScrumStudy</div>
+                    <div>Local: DIO (Digital innovation one)</div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
