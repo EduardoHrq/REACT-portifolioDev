@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star } from "@phosphor-icons/react";
 
 interface IconsProps {
   name: string;
@@ -27,7 +27,7 @@ export function SkillsIcons(props: IconsProps) {
       <div className="group relative flex items-center justify-center ">
         <div className="group-hover:translate-y-[-20%] transition-all rounded-[18px] ring ring-zinc-200">
           {props.star ? (
-            <Star className="fill-black text-black bg-zinc-100 rounded-full p-1 size-7 absolute top-[-10px] right-[-10px] " />
+            <Star weight="fill" className=" text-black bg-zinc-100 rounded-full p-1 size-7 absolute top-[-10px] right-[-10px] " />
           ) : null}
           <img
             src={props.link ? props.link : url}

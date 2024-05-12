@@ -1,4 +1,4 @@
-import { Eye, Github, Info } from "lucide-react";
+import { Eye, GithubLogo, Info } from "@phosphor-icons/react";
 import { SkillsIcons } from "../skillsIcons";
 import { BoxStatus } from "./styles";
 import {
@@ -40,7 +40,7 @@ export function ProjectContainer(props: projectProps) {
                 className="md:w-[300px] md:h-[200px] rounded-[12px] group-hover:brightness-50 md:group-hover:delay-500 ring ring-zinc-200"
               />
               <button className="absolute flex items-center justify-center inset-0 opacity-0 md:group-hover:delay-500 group-hover:scale-100 scale-0 group-hover:opacity-100 transition-all">
-                <Eye size={70} />
+                <Eye size={70} weight="duotone" />
               </button>
             </button>
           </DialogTrigger>
@@ -80,12 +80,12 @@ export function ProjectContainer(props: projectProps) {
             <div>...</div>
           </div>
         </div>
-        <div className="flex md:flex-col justify-between md:*:w-[50px] *:flex-1 *:flex *:items-center *:justify-center p-2">
+        <div className="flex md:grid md:grid-rows-3 justify-between md:*:w-[50px] *:flex-1 *:flex *:items-center *:justify-center p-2">
           {isDesktop ? (
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
-                  <Info />
+                  <Info size={30} weight="fill" />
                 </button>
               </DialogTrigger>
               <ProjectModal
@@ -103,7 +103,7 @@ export function ProjectContainer(props: projectProps) {
             <Drawer>
               <DrawerTrigger asChild>
                 <button className="bg-blue-500 md:rounded-bl-none md:rounded-t-lg rounded-l-lg py-2 md:p-0 hover:brightness-90 transition-all hover:scale-110">
-                  <Info />
+                  <Info size={30} weight="fill" />
                 </button>
               </DrawerTrigger>
               <ProjectModal
@@ -123,14 +123,14 @@ export function ProjectContainer(props: projectProps) {
             target="_blank"
             className="bg-zinc-500 hover:brightness-90 py-2 transition-all hover:scale-110"
           >
-            <Eye />
+            <Eye size={30} weight="duotone" />
           </a>
           <a
             href={props.gitRepo}
             target="_blank"
             className="bg-zinc-200 text-black md:rounded-tr-none md:rounded-b-lg rounded-r-lg py-2 hover:brightness-90 transition-all hover:scale-110"
           >
-            <Github />
+            <GithubLogo size={30} weight="fill" />
           </a>
         </div>
       </div>

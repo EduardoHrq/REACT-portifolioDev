@@ -1,4 +1,4 @@
-import { ArrowDown, Eye, Github } from "lucide-react";
+import { ArrowDown, Eye, GithubLogo } from "@phosphor-icons/react";
 import { DialogClose, DialogHeader, DialogPortal } from "../ui/dialog";
 import { ScrollArea } from "../ui/scroll-area";
 import { DialogContainerContent, DrawerContainerContent } from "./styles";
@@ -166,8 +166,9 @@ export function ProjectModal(props: projectProps) {
                       className="relative bg-zinc-900 w-[300px] h-[100px] md:rounded-t-xl group
                     ring ring-zinc-500 rounded-xl flex items-center justify-center gap-5"
                     >
-                      <Github
+                      <GithubLogo
                         size={50}
+                        weight="fill"
                         className="transition-all fill-zinc-300 text-zinc-300"
                       />
                       <span className="font-bold text-[2rem] text-zinc-200">
@@ -182,6 +183,7 @@ export function ProjectModal(props: projectProps) {
                     >
                       <Eye
                         size={50}
+                        weight="duotone"
                         className="transition-all fill-zinc-300 text-zinc-900"
                       />
                       <span className="font-bold text-[2rem] text-zinc-200">
@@ -316,8 +318,9 @@ export function ProjectModal(props: projectProps) {
               <div className="flex items-center justify-around">
                 <a href="">
                   <div className="relative bg-zinc-900 w-[300px] h-[100px] rounded-t-xl group hover:bg-zinc-200">
-                    <Github
+                    <GithubLogo
                       size={50}
+                      weight="fill"
                       className="absolute -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2 
                       group-hover:left-[35%] transition-all group-hover:fill-zinc-900 
                       group-hover:text-zinc-900 "
@@ -342,6 +345,7 @@ export function ProjectModal(props: projectProps) {
                     </span>
                       <Eye
                         size={50}
+                        weight="duotone"
                         className="absolute -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2 
                         group-hover:left-[65%] transition-all group-hover:text-zinc-900 opacity-0
                         group-hover:opacity-100"

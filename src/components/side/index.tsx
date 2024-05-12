@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { LinksContainer, SideContainer } from "./styles";
-import { ArrowLeft, Circle, Github, Linkedin, User } from "lucide-react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import { ArrowLeft, Bag, Brain, Certificate, DeviceMobile, GithubLogo, LinkedinLogo, ReadCvLogo, User } from "@phosphor-icons/react";
 
 export function Side() {
   return (
@@ -12,14 +12,14 @@ export function Side() {
     >
       <Button
         variant={"ghost"}
-        className="p-1 leading-none absolute right-0 top-0 transition-all"
+        className="md:hidden p-1 leading-none absolute right-0 top-0 transition-all"
         onClick={(e) => {
           document.getElementById("sideContainer")!.classList.toggle("hide");
           e.currentTarget.classList.toggle("right-[-1.5rem]");
           e.currentTarget.classList.toggle("rotate-180");
         }}
       >
-        <ArrowLeft />
+        <ArrowLeft size={25} weight="fill" />
       </Button>
 
       <div className="flex flex-col items-center justify-center my-5">
@@ -28,7 +28,7 @@ export function Side() {
           className="object-cover aspect-auto w-[6rem] rounded-full"
           alt="profile"
         />
-        <p>Eduardo Henrique</p>
+        <p className="font-bold mt-5 tracking-wider">Eduardo Henrique</p>
       </div>
 
       <Separator orientation="horizontal" className="my-3" />
@@ -40,7 +40,7 @@ export function Side() {
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
-          <User className="fill-zinc-100 text-zinc-100" />
+          <User weight="fill" size={25} className="fill-zinc-100 text-zinc-100" />
           ShowAll
         </NavLink>
         <NavLink
@@ -49,7 +49,7 @@ export function Side() {
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
-          <Circle />
+          <Brain size={25} weight="fill" />
           skills
         </NavLink>
         <NavLink
@@ -58,7 +58,7 @@ export function Side() {
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
-          <Circle />
+          <Bag weight="fill" size={25} />
           Portifolio
         </NavLink>
         <NavLink
@@ -67,7 +67,7 @@ export function Side() {
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
-          <Circle />
+          <Certificate size={25} weight="fill" />
           Certificates
         </NavLink>
         <NavLink
@@ -76,7 +76,7 @@ export function Side() {
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
         >
-          <Circle />
+          <DeviceMobile size={25} weight="fill" />
           Contact
         </NavLink>
       </LinksContainer>
@@ -85,28 +85,29 @@ export function Side() {
 
       <div className="flex justify-between my-5 *:no-underline *:relative *:cursor-pointer ">
         <a
-          className="group hover:bg-zinc-200 size-[32px] flex items-center justify-center rounded-full transition-all"
+          className="group hover:bg-zinc-200 flex items-center justify-center rounded-full transition-all p-2"
           href="https://github.com/eduardohrq"
           target="_blank"
         >
-          <Github className="fill-zinc-100 text-zinc-100 group-hover:fill-black group-hover:text-black transition-all" />
+          <GithubLogo weight="fill" size={30} className="group-hover:fill-black group-hover:text-black transition-all" />
           <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
             Github/Eduardohrq
           </div>
         </a>
         <a
-          className="group hover:bg-blue-500 size-[32px] flex items-center justify-center rounded-full transition-all"
+          className="group hover:bg-blue-500 p-2 flex items-center justify-center rounded-full transition-all"
           href="https://linkedin.com/in/eduardohrq"
         >
-          <Linkedin className="fill-zinc-100 text-zinc-100 group-hover:fill-zinc-100 group-hover:text-zinc-100 transition-all" />
+          <LinkedinLogo weight="fill" size={30} className="fill-zinc-100 text-zinc-100 group-hover:fill-zinc-100 group-hover:text-zinc-100 transition-all" />
           <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
             Linkedin/Eduardohrq
           </div>
         </a>
-        <a className="group" href="#" target="_blank">
-          <Circle className="fill-zinc-100 text-zinc-100" />
+
+        <a className="group p-2 hover:bg-zinc-700 flex items-center justify-center rounded-full transition-all" href="#" target="_blank">
+          <ReadCvLogo size={30} weight="fill" className="fill-zinc-100 text-zinc-100" />
           <div className="absolute z-[-2] opacity-0 scale-0 transition-all origin-left top-0 left-[100%] bg-zinc-800 p-2 rounded group-hover:z-[2] group-hover:opacity-100 group-hover:scale-100 group-hover:delay-1000">
-            Github/Eduardohrq
+            CV
           </div>
         </a>
       </div>

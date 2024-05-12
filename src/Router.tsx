@@ -9,7 +9,7 @@ import { Contacts } from "./pages/contact";
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<DefaultLayout />}>
+      <Route element={<DefaultLayout />}>
         <Route path="/" element={<Initial />} />
         <Route path="skills" element={<Skills />}/>
         <Route path="portifolio" element={<Portifolio />}/>

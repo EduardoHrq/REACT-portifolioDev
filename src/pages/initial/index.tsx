@@ -2,16 +2,16 @@ import { Separator } from "@/components/ui/separator";
 import { ProfileContainer } from "./styles";
 import {
   ArrowUpRight,
-  Book,
   Eye,
-  Frown,
-  Github,
-  Linkedin,
-  Mail,
+  GithubLogo,
+  LinkedinLogo,
+  Envelope,
   Phone,
-  StickyNote,
+  SmileySad,
   Users,
-} from "lucide-react";
+  GraduationCap,
+  Certificate,
+} from "@phosphor-icons/react";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -94,10 +94,18 @@ export function Initial() {
             target="_blank"
           >
             <div className="group p-3 bg-black rounded-full">
-              <Github className="fill-zinc-50 bg-black text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
+              <GithubLogo
+                size={30}
+                weight="fill"
+                className=" cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500"
+              />
               <div className="hidden absolute right-0 top-[50%] -translate-y-1/2  w-max z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-black p-2 rounded-full">
-                  <Github className="fill-zinc-50 text-zinc-50" />
+                  <GithubLogo
+                    size={30}
+                    weight="fill"
+                    className="fill-zinc-50 text-zinc-50"
+                  />
                 </div>
                 <div className="h-[40px] bg-black p-[.5px] opacity-50"></div>
                 <div className="space-y-1">
@@ -114,10 +122,18 @@ export function Initial() {
             target="_blank"
           >
             <div className="group p-3 bg-blue-500 rounded-full">
-              <Linkedin className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
+              <LinkedinLogo
+                size={30}
+                weight="fill"
+                className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500"
+              />
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center gap-1 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-blue-500 p-2 rounded-full">
-                  <Linkedin className="fill-zinc-50 text-zinc-50" />
+                  <LinkedinLogo
+                    size={30}
+                    weight="fill"
+                    className="fill-zinc-50 text-zinc-50"
+                  />
                 </div>
                 <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
                 <div className="space-y-1">
@@ -137,12 +153,20 @@ export function Initial() {
             href="mailto:eduardohrq.silva06@gmail.com"
             target="_blank"
           >
-            <div className="group p-3 bg-zinc-400 rounded-full">
-              <Mail className="fill-zinc-500 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
+            <div className="group p-3 bg-zinc-700 rounded-full">
+              <Envelope
+                size={30}
+                weight="fill"
+                className=" cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500"
+              />
 
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
-                <div className="bg-zinc-300 p-2 rounded-full">
-                  <Mail className="fill-zinc-50 text-zinc-900" />
+                <div className="bg-zinc-700 p-2 rounded-full">
+                  <Envelope
+                    size={30}
+                    weight="fill"
+                    className="fill-zinc-50 text-zinc-900"
+                  />
                 </div>
                 <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
                 <div className="space-y-1">
@@ -161,11 +185,19 @@ export function Initial() {
             target="_blank"
           >
             <div className="group p-3 bg-green-500 rounded-full">
-              <Phone className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500" />
+              <Phone
+                size={30}
+                weight="fill"
+                className="fill-zinc-50 text-zinc-50 cursor-pointer md:group-hover:scale-[2] transition duration-1000 group-hover:delay-500"
+              />
 
               <div className="hidden absolute w-max right-0 top-[50%] -translate-y-1/2 z-10 md:flex items-center space-x-2 bg-zinc-800 p-2 rounded scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all group-hover:delay-1000">
                 <div className="bg-green-500 p-2 rounded-full">
-                  <Phone className="fill-zinc-50 text-zinc-50" />
+                  <Phone
+                    size={30}
+                    weight="fill"
+                    className="fill-zinc-50 text-zinc-50"
+                  />
                 </div>
                 <div className="h-[50px] bg-black p-[.5px] opacity-50"></div>
                 <div className="space-y-1">
@@ -208,7 +240,7 @@ export function Initial() {
           </p>
           <div className="flex-1 flex flex-col items-center justify-center ">
             <div className="flex flex-col items-center justify-center gap-2 my-5">
-              <Frown size={30} className="text-red-500" />
+              <SmileySad size={30} weight="fill" />
               Sem experiencia profissional
             </div>
           </div>
@@ -223,7 +255,7 @@ export function Initial() {
               <p className="opacity-0 group-hover:opacity-100 transition-all translate-x-[100%] group-hover:translate-x-0">
                 See all
               </p>
-              <Eye className="" />
+              <Eye size={30} weight="duotone" className="" />
             </NavLink>
           </p>
           <div className="space-y-2">
@@ -231,7 +263,7 @@ export function Initial() {
               <AccordionItem value="item1">
                 <AccordionTrigger>
                   <div className="flex gap-3 items-center">
-                    <Book />
+                    <GraduationCap size={30} weight="fill" />
                     Engenharia de software
                   </div>
                 </AccordionTrigger>
@@ -256,7 +288,7 @@ export function Initial() {
               <AccordionItem value="item1">
                 <AccordionTrigger>
                   <div className="flex gap-3 items-center">
-                    <StickyNote />
+                    <Certificate size={30} weight="fill" />
                     Scrum
                   </div>
                 </AccordionTrigger>
@@ -275,7 +307,7 @@ export function Initial() {
               <AccordionItem value="item1">
                 <AccordionTrigger>
                   <div className="flex gap-3 items-center">
-                    <StickyNote />
+                    <Certificate size={30} weight="fill" />
                     Bootcamp em backend Java
                   </div>
                 </AccordionTrigger>
@@ -294,7 +326,7 @@ export function Initial() {
               <AccordionItem value="item1">
                 <AccordionTrigger>
                   <div className="flex gap-3 items-center">
-                    <StickyNote />
+                    <Certificate size={30} weight="fill" />
                     Java
                   </div>
                 </AccordionTrigger>
@@ -321,7 +353,7 @@ export function Initial() {
             <p className="md:opacity-0 group-hover:opacity-100 transition-all md:translate-x-[100%] group-hover:translate-x-0">
               See all
             </p>
-            <Eye className="" />
+            <Eye size={30} weight="duotone" className="" />
           </NavLink>
         </div>
       </div>
