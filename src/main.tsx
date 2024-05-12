@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./globals.css";
@@ -9,7 +9,7 @@ import { Initial } from "./pages/initial";
 import { Skills } from "./pages/skills";
 import { DefaultLayout } from "./layout";
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     element: <DefaultLayout />,
