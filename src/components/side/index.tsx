@@ -62,7 +62,7 @@ export function Side() {
           Portifolio
         </NavLink>
         <NavLink
-          to={"certificates"}
+          to={"certificados"}
           className={
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
@@ -71,7 +71,7 @@ export function Side() {
           Certificates
         </NavLink>
         <NavLink
-          to={"contact"}
+          to={"contatos"}
           className={
             "[&.active]:text-white [&.active]:font-bold [&.active]:bg-sky-800"
           }
