@@ -8,7 +8,7 @@ import { Contacts } from "./pages/contact";
 
 export function Router() {
   return (
-    <Routes>
+    <Routes >
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Initial />} />
         <Route path="skills" element={<Skills />}/>
